@@ -34,12 +34,6 @@ cd api-neo4j
 docker-compose up -d
 ```
 
-#### 4. Lancer l'API  :
-
-```
-py ./app/app.py
-```
-
 
 **✅ Vous pouvez maintenant accéder à l'API (port 5000)**
 

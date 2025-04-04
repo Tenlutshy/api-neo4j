@@ -9,3 +9,15 @@ services:
       - "7687:7687"     # Bolt (driver)
     environment:
       NEO4J_AUTH: "neo4j/password"
+
+  web:
+      build: .
+      container_name: api
+      ports:
+        - "5000:5000"
+      depends_on:
+        - neo4j
+      volumes:
+        - ./app:/app
+      working_dir: /app
+      command: python app.py
